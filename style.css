@@ -1,0 +1,128 @@
+/* ===== Body ===== */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #fff0f5);
+    color: #330033;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ===== LOGIN/REGISTER BOX ===== */
+.loginBox {
+    width: 350px;
+    margin: 120px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 1px solid #ffccdd;
+}
+
+/* Pantay na inputs */
+.inputGroup {
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 12px 40px 12px 12px; /* space for eye icon */
+    border-radius: 8px;
+    border: 1px solid #ffccdd;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Eye icon */
+.togglePassword {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #ff69b4;
+    transition: 0.3s;
+}
+.togglePassword:hover { color: #ff3399; }
+
+/* Login/Register button */
+.loginBox button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.loginBox button:hover { background-color: #ff3399; }
+
+.loginBox span { color: #ff69b4; cursor: pointer; font-weight: bold; }
+
+#loginMessage, #registerMessage { margin-top: 10px; font-weight: bold; color: red; }
+
+/* ===== Main System ===== */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    flex: 1;
+}
+
+h1 { text-align: center; color: #ff69b4; margin-bottom: 30px; }
+
+.menu { text-align: center; margin-bottom: 30px; }
+
+.menu button {
+    background-color: #ff99cc;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.menu button:hover { background-color: #ff66aa; }
+
+#addSection, #viewSection, #searchSection, #updateSection, #deleteSection {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ffccdd;
+    border-radius: 10px;
+}
+.hidden { display: none; }
+
+input { padding: 12px; margin: 10px 6px; border-radius: 8px; border: 1px solid #ffccdd; width: 200px; font-size: 14px; }
+
+#saveStudent, #searchStudentBtn, #updateStudentBtn, #deleteStudentBtn {
+    background-color: #ff69b4; color: white; border: none; padding: 10px 18px; margin-top: 10px; border-radius: 8px; cursor: pointer; transition: 0.3s;
+}
+#saveStudent:hover, #searchStudentBtn:hover, #updateStudentBtn:hover, #deleteStudentBtn:hover { background-color: #ff3399; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+th, td { border: 1px solid #ffccdd; padding: 10px; text-align: center; }
+th { background-color: #ff99cc; color: white; }
+tr:nth-child(even) { background-color: #ffe6f0; }
+
+#notification { text-align: center; margin-bottom: 15px; font-weight: bold; color: green; }
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #ff66aa, #ff99cc);
+    color: white;
+    margin-top: 40px;
+    border-radius: 0 0 15px 15px;
+    font-size: 14px;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+}

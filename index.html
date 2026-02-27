@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Information Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN SECTION -->
+<div id="loginSection" class="loginBox">
+    <h2>Login</h2>
+    <div class="inputGroup">
+        <input type="text" id="loginUsername" placeholder="Username">
+    </div>
+    <div class="inputGroup">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <span class="togglePassword" id="toggleLogin">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8z"/>
+                <path d="M8 5a3 3 0 100 6 3 3 0 000-6z" fill="white"/>
+            </svg>
+        </span>
+    </div>
+    <button id="loginBtn">Login</button>
+    <p>Don't have an account? <span id="showRegister">Register</span></p>
+    <p id="loginMessage"></p>
+</div>
+
+<!-- REGISTER SECTION -->
+<div id="registerSection" class="loginBox hidden">
+    <h2>Register</h2>
+    <div class="inputGroup">
+        <input type="text" id="regUsername" placeholder="Username">
+    </div>
+    <div class="inputGroup">
+        <input type="password" id="regPassword" placeholder="Password">
+        <span class="togglePassword" id="toggleRegister">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8z"/>
+                <path d="M8 5a3 3 0 100 6 3 3 0 000-6z" fill="white"/>
+            </svg>
+        </span>
+    </div>
+    <button id="registerBtn">Create Account</button>
+    <p>Already have an account? <span id="showLogin">Login</span></p>
+    <p id="registerMessage"></p>
+</div>
+
+<!-- MAIN SYSTEM -->
+<div id="mainSystem" class="hidden">
+    <div id="notification"></div>
+
+    <div class="container">
+
+        <h1>Student Information Management System</h1>
+
+        <div class="menu">
+            <button id="btnAdd">Add Student</button>
+            <button id="btnView">View Students</button>
+            <button id="btnSearch">Search Student</button>
+            <button id="btnUpdate">Update Student</button>
+            <button id="btnDelete">Delete Student</button>
+            <button id="btnExit">Logout</button>
+        </div>
+
+        <div id="addSection">
+            <input id="id" placeholder="Student ID">
+            <input id="name" placeholder="Full Name">
+            <input id="course" placeholder="Course">
+            <input id="year" placeholder="Year Level">
+            <input id="age" type="number" placeholder="Age">
+            <button id="saveStudent">Save Student</button>
+        </div>
+
+        <div id="viewSection" class="hidden">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Year</th>
+                        <th>Age</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+
+        <div id="searchSection" class="hidden">
+            <input id="searchInput" placeholder="Enter ID or Name">
+            <button id="searchStudentBtn">Search</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Year</th>
+                        <th>Age</th>
+                    </tr>
+                </thead>
+                <tbody id="searchBody"></tbody>
+            </table>
+        </div>
+
+        <div id="updateSection" class="hidden">
+            <input id="updateId" placeholder="Enter Student ID">
+            <input id="updateCourse" placeholder="New Course">
+            <input id="updateYear" placeholder="New Year Level">
+            <input id="updateAge" type="number" placeholder="New Age">
+            <button id="updateStudentBtn">Update Student</button>
+        </div>
+
+        <div id="deleteSection" class="hidden">
+            <input id="deleteId" placeholder="Enter Student ID">
+            <button id="deleteStudentBtn">Delete Student</button>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p> Abegail Garrido</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
